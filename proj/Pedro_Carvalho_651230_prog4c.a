@@ -1,0 +1,37 @@
+; Arquitetura de Computadores I
+; Projeto
+; Pedro Henrique Lima Carvalho
+; Mat: 651230
+; Questao 4.c) Teste divisor
+; Calcula se entrada 2 e' divisor da entrada 1
+; if primeira entrada == 0 resposta 1
+; if segunda entrada == 0 fim (erro)
+; ate entrada negativa
+
+Start:	IN
+        STO  a		
+	BRA  Test1 
+in1-ok: IN
+        STO  b
+        BRA  Test2
+in2-ok: LDA  a
+        SUB  b
+        STO  a
+        BRZ  yes
+        BRP  in2-ok
+        LDA  false
+        OUT
+        BRA  Start
+yes:    LDA  true
+        OUT
+        BRA  Start
+Test1:  BRP  in1-ok
+        BRZ  yes
+Test2:  BRP  in2-ok
+Done:   HLT  		
+
+a:	.data 2 0 ; dividendo
+b:      .data 2 0 ; divisor
+one:    .data 2 2 [1]; um
+true:   .data 2 2 [1]; Sim
+false:  .data 2 2 [0]; Nao

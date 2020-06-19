@@ -1,0 +1,28 @@
+; Arquitetura de Computadores I
+; Projeto
+; Pedro Henrique Lima Carvalho
+; Mat: 651230
+; Questao 4.d) Serie Fibonnacci menor que 100
+
+Start:  LDA  b
+        OUT
+        OUT
+Loop:   LDA  b
+        ADD  a		
+        STO  r
+        LDA  b
+        STO  a
+        LDA  r
+        STO  b  
+        SUB  cem
+        BRP  Done
+        BRZ  Done
+        LDA  r
+        OUT
+        BRA  Loop
+Done:   HLT  		
+
+a:	.data 2 2 [1]; operando a
+b:      .data 2 2 [1]; operando b
+r:      .data 2 0 ; resultado
+cem:    .data 2 2 [100]; cem

@@ -1,0 +1,41 @@
+; Arquitetura de Computadores I
+; Projeto
+; Pedro Henrique Lima Carvalho
+; Mat: 651230
+; Questao Extra 2 Pesquisa Sequencial Rapida
+; Pesquisa em um arranjo ate entrada negativa
+
+arr:    .data 10 2 [4, 7, 9, 8, 3]
+
+Start:	IN
+        STO  x		
+	BRA  Test 
+in-ok:  LDA  five
+        STO  count
+loop:   LAD  address     
+        SUB  x
+        BRZ  found
+        LDA  count
+        SUB  true
+        STO  count
+        BRZ  end
+        BRA  loop
+end:    LDA  false
+        OUT
+        STO  address
+        BRA  Start
+found:  LDA  true
+        OUT
+        LDA  false
+        STO  address
+        BRA  Start
+Test:   BRP  in-ok
+        BRZ  in-ok
+Done:   HLT  		
+
+count:	.data 2 2 [5] ; contador
+five:   .data 2 2 [5] ; cinco
+x:      .data 2 0 ; x a ser procurado
+false:  .data 2 2 [0]; zero - falso
+true:   .data 2 2 [1]; um - verdadeiro
+address:.data 2 0 ; endereco do arranjo

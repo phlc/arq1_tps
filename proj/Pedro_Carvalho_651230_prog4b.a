@@ -1,0 +1,40 @@
+; Arquitetura de Computadores I
+; Projeto
+; Pedro Henrique Lima Carvalho
+; Mat: 651230
+; Questao 4.b) Quadrado com Soma de Impares
+; Calcula quadrado da entrada ate entrada negativa
+
+Start:	IN		
+	BRA  Test 
+in-ok:  BRZ  Print
+        STO  count
+        LDA  one
+        STO  impar
+        STO  resul
+        LDA  count
+        SUB  one
+loop:   BRZ  Print
+        STO  count    
+        LDA  impar        
+        ADD  two
+        STO  impar
+        ADD  resul
+        STO  resul
+        LDA  count
+        SUB  one
+        BRA  loop
+Print:  LDA  resul
+        OUT
+        SUB  resul
+        STO  resul
+        BRA  Start
+Test:   BRP  in-ok
+        BRZ  in-ok
+Done:   HLT  		
+
+count:	.data 2 0 ; operando
+impar:  .data 2 2 [1]; numero impar para soma
+resul:  .data 2 2 [0]; resultado
+one:    .data 2 2 [1]; um
+two:    .data 2 2 [2]; dois

@@ -1,0 +1,64 @@
+; Arquitetura de Computadores I
+; Projeto
+; Pedro Henrique Lima Carvalho
+; Mat: 651230
+; Questao Extra 1 Ordenar BubbleSort
+
+; Arranjo
+arr:    .data 10 2 [4, 7, 9, 8, 3]
+
+; Constantes
+five:   .data 2 2 [5] ; cinco
+one:    .data 2 2 [1] ; um
+zero:   .data 2 0 ; zero
+
+; Inicio
+Start:  
+        LAD  address
+        OUT
+        LDA  count1
+        SUB  one
+        STO  count1
+        BRP  Start
+        LDA  count2
+        STO  count1  
+        LDA  zero
+        STO  address
+Sort:
+        LAD  address
+        STO  buffer
+lopInt: LAD  address
+        SUB  buffer
+        BRP  noSwap
+        SWP  address
+        STO  buffer
+        BRA  Cont
+noSwap: 
+        ADD  buffer
+        STO  buffer
+Cont:   LDA  count2
+        SUB  one
+        STO  count2
+        BRP  lopInt
+        LDA  zero
+        STO  address
+        LDA  count1
+        SUB  one
+        STO  count1
+        STO  count2
+        BRP  Sort
+Fim:    
+        LDA  five
+        STO  count1
+print:  LAD  address
+        OUT
+        LDA  count1
+        SUB  one
+        STO  count1
+        BRP  print
+        HLT  		
+
+buffer: .data 2 0 ; buffer
+count1:	.data 2 2 [5] ; contador
+count2:	.data 2 2 [4] ; contador
+address:.data 2 0 ; endereco do arranjo

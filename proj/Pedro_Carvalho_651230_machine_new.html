@@ -1,0 +1,247 @@
+<HTML><HEAD>
+<TITLE>machine_new</TITLE></HEAD>
+<BODY>
+<CENTER><FONT COLOR="#804040" SIZE="+3"><B><I>
+machine_new
+</I></B></FONT></CENTER>
+
+<TABLE bgcolor="#FFC0A0" BORDER="1" CELLPADDING="0" CELLSPACING="3" WIDTH="100%">
+<TR VALIGN="middle"><TD bgcolor="#C08060" COLSPAN="2" HEIGHT="35"><FONT  SIZE="+2"><B>&nbsp;Punctuation preferences</B></font></TD></TR>
+<TR><TD><B>Character</B></TD><TD><B>Use</B></TD></TR>
+<TR><TD>!</TD><TD>symbol</TD></TR>
+<TR><TD>#</TD><TD>symbol</TD></TR>
+<TR><TD>$</TD><TD>symbol</TD></TR>
+<TR><TD>%</TD><TD>symbol</TD></TR>
+<TR><TD>&amp;</TD><TD>symbol</TD></TR>
+<TR><TD>^</TD><TD>symbol</TD></TR>
+<TR><TD>_</TD><TD>symbol</TD></TR>
+<TR><TD>`</TD><TD>symbol</TD></TR>
+<TR><TD>*</TD><TD>symbol</TD></TR>
+<TR><TD>?</TD><TD>symbol</TD></TR>
+<TR><TD>@</TD><TD>symbol</TD></TR>
+<TR><TD>~</TD><TD>symbol</TD></TR>
+<TR><TD>+</TD><TD>symbol</TD></TR>
+<TR><TD>-</TD><TD>symbol</TD></TR>
+<TR><TD>(</TD><TD>token</TD></TR>
+<TR><TD>)</TD><TD>token</TD></TR>
+<TR><TD>,</TD><TD>token</TD></TR>
+<TR><TD>/</TD><TD>token</TD></TR>
+<TR><TD>=</TD><TD>token</TD></TR>
+<TR><TD>[</TD><TD>token</TD></TR>
+<TR><TD>\</TD><TD>token</TD></TR>
+<TR><TD>]</TD><TD>token</TD></TR>
+<TR><TD>{</TD><TD>token</TD></TR>
+<TR><TD>|</TD><TD>token</TD></TR>
+<TR><TD>}</TD><TD>token</TD></TR>
+<TR><TD>.</TD><TD>pseudo</TD></TR>
+<TR><TD>:</TD><TD>label</TD></TR>
+<TR><TD>;</TD><TD>comment</TD></TR>
+</TABLE><P></P>
+
+<TABLE bgcolor="#FFC0A0" BORDER="1"CELLPADDING="0" CELLSPACING="3" WIDTH="100%">
+<TR VALIGN="middle"><TD bgcolor="#C08060" COLSPAN="4" HEIGHT="35"><FONT  SIZE="+2"><B>&nbsp;Registers</B></font></TD></TR>
+<TR><TD><B>Name</B></TD><TD><B>Width</B></TD><TD><B>Initial Value</B></TD><TD><B>Read Only</B></TD></TR>
+<TR><TD>AC</TD><TD>16</TD><TD>0</TD><TD>false</TD></TR>
+<TR><TD>IR</TD><TD>16</TD><TD>0</TD><TD>false</TD></TR>
+<TR><TD>MAR</TD><TD>16</TD><TD>0</TD><TD>false</TD></TR>
+<TR><TD>MDR</TD><TD>16</TD><TD>0</TD><TD>false</TD></TR>
+<TR><TD>PC</TD><TD>16</TD><TD>0</TD><TD>false</TD></TR>
+<TR><TD>Status</TD><TD>8</TD><TD>0</TD><TD>false</TD></TR>
+</TABLE><P></P>
+
+<TABLE bgcolor="#FFC0A0" BORDER="1"CELLPADDING="0" CELLSPACING="3" WIDTH="100%">
+<TR VALIGN="middle"><TD bgcolor="#C08060" COLSPAN="4" HEIGHT="35"><FONT  SIZE="+2"><B>&nbsp;Register Arrays</B></font></TD></TR>
+<TR><TD><B>Name</B></TD><TD><B>Length</B></TD><TD><B>Width</B></TD><TD><B>Registers</B></TD></TR>
+<TR VALIGN="middle"><TD COLSPAN="4"><CENTER>(none)</CENTER></TD></TR>
+</TABLE><P></P>
+
+<TABLE bgcolor="#FFC0A0" BORDER="1"CELLPADDING="0" CELLSPACING="3" WIDTH="100%">
+<TR VALIGN="middle"><TD bgcolor="#C08060" COLSPAN="4" HEIGHT="35"><FONT  SIZE="+2"><B>&nbsp;Condition Bits</B></font></TD></TR>
+<TR><TD><B>Name</B></TD><TD><B>Register</B></TD><TD><B>Bit</B></TD><TD><B>Halt</B></TD></TR>
+<TR><TD>halt-bit</TD><TD>Status</TD><TD>0</TD><TD>true</TD></TR>
+</TABLE><P></P>
+
+<TABLE bgcolor="#FFC0A0" BORDER="1"CELLPADDING="0" CELLSPACING="3" WIDTH="100%">
+<TR VALIGN="middle"><TD bgcolor="#C08060" COLSPAN="3" HEIGHT="35"><FONT  SIZE="+2"><B>&nbsp;RAMs</B></font></TD></TR>
+<TR><TD><B>Name</B></TD><TD><B>Length</B></TD><TD><B>Bits per Cell</B></TD></TR>
+<TR><TD>Main</TD><TD>128</TD><TD>8</TD></TR>
+</TABLE><P></P>
+
+<TABLE bgcolor="#FFC0A0" BORDER="1" CELLPADDING="0" CELLSPACING="3" WIDTH="100%">
+<TR VALIGN="middle"><TD bgcolor="#C08060" COLSPAN="1" HEIGHT="35"><FONT  SIZE="+2"><B>&nbsp;Indexing Order of Bits in Registers</B></font></TD></TR>
+<TR><TD>From  left to right</TD></TR>
+</TABLE><P></P>
+
+<TABLE bgcolor="#FFC0A0" BORDER="1" CELLPADDING="0" CELLSPACING="3" WIDTH="100%">
+<TR VALIGN="middle"><TD bgcolor="#C08060" COLSPAN="1" HEIGHT="35"><FONT  SIZE="+2"><B>&nbsp;Program Counter Register</B></font></TD></TR>
+<TR><TD>(none)</TD></TR>
+</TABLE><P></P>
+
+<TABLE bgcolor="#FFC0A0" BORDER="1" CELLPADDING="0" CELLSPACING="3" WIDTH="100%">
+<TR VALIGN="middle"><TD bgcolor="#C08060" COLSPAN="5" HEIGHT="35"><FONT  SIZE="+2"><B>&nbsp;Set</B></font></TD></TR>
+<TR><TD><B>Name</B></TD><TD><B>Register</B></TD><TD><B>Start Bit</B></TD><TD><B>Number of Bits</B></TD><TD><B>Value</B></TD></TR>
+<TR VALIGN="middle"><TD COLSPAN="5"><CENTER>(none)</CENTER></TD></TR>
+</TABLE><P></P>
+
+<TABLE bgcolor="#FFC0A0" BORDER="1" CELLPADDING="0" CELLSPACING="3" WIDTH="100%">
+<TR VALIGN="middle"><TD bgcolor="#C08060" COLSPAN="7" HEIGHT="35"><FONT  SIZE="+2"><B>&nbsp;Test</B></font></TD></TR>
+<TR><TD><B>Name</B></TD><TD><B>Register</B></TD><TD><B>Start Bit</B></TD><TD><B>Number of Bits</B></TD><TD><B>Comparison</B></TD><TD><B>Value</B></TD><TD><B>Omission</B></TD></TR>
+<TR><TD>if(acc!=0)skip-1</TD><TD>AC</TD><TD>0</TD><TD>16</TD><TD>NE</TD><TD>0</TD><TD>1</TD></TR>
+<TR><TD>if(acc&lt;=0)skip-1</TD><TD>AC</TD><TD>0</TD><TD>16</TD><TD>LE</TD><TD>0</TD><TD>1</TD></TR>
+<TR><TD>if(acc&gt;=0)skip-1</TD><TD>AC</TD><TD>0</TD><TD>16</TD><TD>GE</TD><TD>0</TD><TD>1</TD></TR>
+</TABLE><P></P>
+
+<TABLE bgcolor="#FFC0A0" BORDER="1" CELLPADDING="0" CELLSPACING="3" WIDTH="100%">
+<TR VALIGN="middle"><TD bgcolor="#C08060" COLSPAN="5" HEIGHT="35"><FONT  SIZE="+2"><B>&nbsp;Increment</B></font></TD></TR>
+<TR><TD><B>Name</B></TD><TD><B>Register</B></TD><TD><B>Overflow Bit</B></TD><TD><B>Carry Bit</B></TD><TD><B>Delta</B></TD></TR>
+<TR><TD>+2 MAR</TD><TD>MAR</TD><TD>halt-bit</TD><TD>(none)</TD><TD>2</TD></TR>
+<TR><TD>+2 MDR</TD><TD>MDR</TD><TD>halt-bit</TD><TD>(none)</TD><TD>2</TD></TR>
+<TR><TD>+2 PC</TD><TD>PC</TD><TD>halt-bit</TD><TD>(none)</TD><TD>2</TD></TR>
+<TR><TD>-2 MAR</TD><TD>MAR</TD><TD>halt-bit</TD><TD>(none)</TD><TD>-2</TD></TR>
+</TABLE><P></P>
+
+<TABLE bgcolor="#FFC0A0" BORDER="1" CELLPADDING="0" CELLSPACING="3" WIDTH="100%">
+<TR VALIGN="middle"><TD bgcolor="#C08060" COLSPAN="6" HEIGHT="35"><FONT  SIZE="+2"><B>&nbsp;Shift</B></font></TD></TR>
+<TR><TD><B>Name</B></TD><TD><B>Source</B></TD><TD><B>Destination</B></TD><TD><B>Type</B></TD><TD><B>Direction</B></TD><TD><B>Distance</B></TD></TR>
+<TR VALIGN="middle"><TD COLSPAN="6"><CENTER>(none)</CENTER></TD></TR>
+</TABLE><P></P>
+
+<TABLE bgcolor="#FFC0A0" BORDER="1" CELLPADDING="0" CELLSPACING="3" WIDTH="100%">
+<TR VALIGN="middle"><TD bgcolor="#C08060" COLSPAN="5" HEIGHT="35"><FONT  SIZE="+2"><B>&nbsp;Logical</B></font></TD></TR>
+<TR><TD><B>Name</B></TD><TD><B>Type</B></TD><TD><B>Source1</B></TD><TD><B>Source2</B></TD><TD><B>Destination</B></TD></TR>
+<TR><TD>AC(and)MDR-AC</TD><TD>AND</TD><TD>AC</TD><TD>MDR</TD><TD>AC</TD></TR>
+<TR><TD>AC(not)-&gt;AC</TD><TD>NOT</TD><TD>AC</TD><TD>AC</TD><TD>AC</TD></TR>
+<TR><TD>AC(xor)MDR-&gt;AC</TD><TD>XOR</TD><TD>AC</TD><TD>MDR</TD><TD>AC</TD></TR>
+</TABLE><P></P>
+
+<TABLE bgcolor="#FFC0A0" BORDER="1" CELLPADDING="0" CELLSPACING="3" WIDTH="100%">
+<TR VALIGN="middle"><TD bgcolor="#C08060" COLSPAN="7" HEIGHT="35"><FONT  SIZE="+2"><B>&nbsp;Arithmetic</B></font></TD></TR>
+<TR><TD><B>Name</B></TD><TD><B>Type</B></TD><TD><B>Source1</B></TD><TD><B>Source2</B></TD><TD><B>Destination</B></TD><TD><B>Overflow Bit</B></TD><TD><B>Carry Bit</B></TD></TR>
+<TR><TD>AC(+)MDR-&gt;AC</TD><TD>ADD</TD><TD>AC</TD><TD>MDR</TD><TD>AC</TD><TD>halt-bit</TD><TD>(none)</TD></TR>
+<TR><TD>AC(-)MDR-&gt;AC</TD><TD>SUBTRACT</TD><TD>AC</TD><TD>MDR</TD><TD>AC</TD><TD>halt-bit</TD><TD>(none)</TD></TR>
+</TABLE><P></P>
+
+<TABLE bgcolor="#FFC0A0" BORDER="1" CELLPADDING="0" CELLSPACING="3" WIDTH="100%">
+<TR VALIGN="middle"><TD bgcolor="#C08060" COLSPAN="2" HEIGHT="35"><FONT  SIZE="+2"><B>&nbsp;Branch</B></font></TD></TR>
+<TR><TD><B>Name</B></TD><TD><B>Amount</B></TD></TR>
+<TR VALIGN="middle"><TD COLSPAN="2"><CENTER>(none)</CENTER></TD></TR>
+</TABLE><P></P>
+
+<TABLE bgcolor="#FFC0A0" BORDER="1" CELLPADDING="0" CELLSPACING="3" WIDTH="100%">
+<TR VALIGN="middle"><TD bgcolor="#C08060" COLSPAN="6" HEIGHT="35"><FONT  SIZE="+2"><B>&nbsp;TransferRtoR</B></font></TD></TR>
+<TR><TD><B>Name</B></TD><TD><B>Source</B></TD><TD><B>Src Start Bit</B></TD><TD><B>Destination</B></TD><TD><B>Dest Start Bit</B></TD><TD><B>Number of Bits</B></TD></TR>
+<TR><TD>AC-&gt;MAR</TD><TD>AC</TD><TD>0</TD><TD>MAR</TD><TD>0</TD><TD>16</TD></TR>
+<TR><TD>AC-&gt;MDR</TD><TD>AC</TD><TD>0</TD><TD>MDR</TD><TD>0</TD><TD>16</TD></TR>
+<TR><TD>IR-&gt;MAR</TD><TD>IR</TD><TD>8</TD><TD>MAR</TD><TD>8</TD><TD>8</TD></TR>
+<TR><TD>IR-&gt;PC</TD><TD>IR</TD><TD>8</TD><TD>PC</TD><TD>8</TD><TD>8</TD></TR>
+<TR><TD>MAR-&gt;PC</TD><TD>MAR</TD><TD>0</TD><TD>PC</TD><TD>0</TD><TD>8</TD></TR>
+<TR><TD>MDR-&gt;AC</TD><TD>MDR</TD><TD>0</TD><TD>AC</TD><TD>0</TD><TD>16</TD></TR>
+<TR><TD>MDR-&gt;IR</TD><TD>MDR</TD><TD>0</TD><TD>IR</TD><TD>0</TD><TD>16</TD></TR>
+<TR><TD>PC-&gt;MAR</TD><TD>PC</TD><TD>8</TD><TD>MAR</TD><TD>8</TD><TD>8</TD></TR>
+</TABLE><P></P>
+
+<TABLE bgcolor="#FFC0A0" BORDER="1" CELLPADDING="0" CELLSPACING="3" WIDTH="100%">
+<TR VALIGN="middle"><TD bgcolor="#C08060" COLSPAN="9" HEIGHT="35"><FONT  SIZE="+2"><B>&nbsp;TransferRtoA</B></font></TD></TR>
+<TR><TD><B>Name</B></TD><TD><B>Source</B></TD><TD><B>Src Start Bit</B></TD><TD><B>Destination</B></TD><TD><B>Dest Start Bit</B></TD><TD><B>Number of Bits</B></TD><TD><B>Index</B></TD><TD><B>Index Start Bit</B></TD><TD><B>Index Number of Bits</B></TD></TR>
+<TR VALIGN="middle"><TD COLSPAN="9"><CENTER>(none)</CENTER></TD></TR>
+</TABLE><P></P>
+
+<TABLE bgcolor="#FFC0A0" BORDER="1" CELLPADDING="0" CELLSPACING="3" WIDTH="100%">
+<TR VALIGN="middle"><TD bgcolor="#C08060" COLSPAN="9" HEIGHT="35"><FONT  SIZE="+2"><B>&nbsp;TransferAtoR</B></font></TD></TR>
+<TR><TD><B>Name</B></TD><TD><B>Source</B></TD><TD><B>Src Start Bit</B></TD><TD><B>Destination</B></TD><TD><B>Dest Start Bit</B></TD><TD><B>Number of Bits</B></TD><TD><B>Index</B></TD><TD><B>Index Start Bit</B></TD><TD><B>Index Number of Bits</B></TD></TR>
+<TR VALIGN="middle"><TD COLSPAN="9"><CENTER>(none)</CENTER></TD></TR>
+</TABLE><P></P>
+
+<TABLE bgcolor="#FFC0A0" BORDER="1" CELLPADDING="0" CELLSPACING="3" WIDTH="100%">
+<TR VALIGN="middle"><TD bgcolor="#C08060" COLSPAN="2" HEIGHT="35"><FONT  SIZE="+2"><B>&nbsp;Decode</B></font></TD></TR>
+<TR><TD><B>Name</B></TD><TD><B>IR</B></TD></TR>
+<TR><TD>DECODE IR</TD><TD>IR</TD></TR>
+</TABLE><P></P>
+
+<TABLE bgcolor="#FFC0A0" BORDER="1" CELLPADDING="0" CELLSPACING="3" WIDTH="100%">
+<TR VALIGN="middle"><TD bgcolor="#C08060" COLSPAN="3" HEIGHT="35"><FONT  SIZE="+2"><B>&nbsp;Set Condition Bit</B></font></TD></TR>
+<TR><TD><B>Name</B></TD><TD><B>Bit</B></TD><TD><B>Value</B></TD></TR>
+<TR><TD>set-halt-bit</TD><TD>halt-bit</TD><TD>1</TD></TR>
+</TABLE><P></P>
+
+<TABLE bgcolor="#FFC0A0" BORDER="1" CELLPADDING="0" CELLSPACING="3" WIDTH="100%">
+<TR VALIGN="middle"><TD bgcolor="#C08060" COLSPAN="5" HEIGHT="35"><FONT  SIZE="+2"><B>&nbsp;IO</B></font></TD></TR>
+<TR><TD><B>Name</B></TD><TD><B>Direction</B></TD><TD><B>Type</B></TD><TD><B>Buffer</B></TD><TD><B>Connection</B></TD></TR>
+<TR><TD>AC-&gt;OUT(ascii)</TD><TD>output</TD><TD>ascii</TD><TD>AC</TD><TD>[Console]</TD></TR>
+<TR><TD>AC-&gt;OUT(int)</TD><TD>output</TD><TD>integer</TD><TD>AC</TD><TD>[Console]</TD></TR>
+<TR><TD>IN(int)-&gt;AC</TD><TD>input</TD><TD>integer</TD><TD>AC</TD><TD>[Console]</TD></TR>
+</TABLE><P></P>
+
+<TABLE bgcolor="#FFC0A0" BORDER="1" CELLPADDING="0" CELLSPACING="3" WIDTH="100%">
+<TR VALIGN="middle"><TD bgcolor="#C08060" COLSPAN="5" HEIGHT="35"><FONT  SIZE="+2"><B>&nbsp;Memory Access</B></font></TD></TR>
+<TR><TD><B>Name</B></TD><TD><B>Direction</B></TD><TD><B>Memory</B></TD><TD><B>Data</B></TD><TD><B>Address</B></TD></TR>
+<TR><TD>AC-&gt;MEN[MAR]</TD><TD>write</TD><TD>Main</TD><TD>AC</TD><TD>MAR</TD></TR>
+<TR><TD>MDR-&gt;MEN[MAR]</TD><TD>write</TD><TD>Main</TD><TD>MDR</TD><TD>MAR</TD></TR>
+<TR><TD>MEM[MAR]-&gt;MDR</TD><TD>read</TD><TD>Main</TD><TD>MDR</TD><TD>MAR</TD></TR>
+</TABLE><P></P>
+
+<TABLE bgcolor="#FFC0A0" BORDER="1" CELLPADDING="0" CELLSPACING="3" WIDTH="100%">
+<TR VALIGN="middle"><TD bgcolor="#C08060" COLSPAN="2" HEIGHT="35"><FONT  SIZE="+2"><B>&nbsp;EQUs</B></font></TD></TR>
+<TR><TD><B>Name</B></TD><TD><B>Value</B></TD></TR>
+
+<TR VALIGN="middle"><TD COLSPAN="2"><CENTER>(none)</CENTER></TD></TR>
+</TABLE><P></P>
+
+<TABLE bgcolor="#FFC0A0" BORDER="1" CELLPADDING="0" CELLSPACING="3" WIDTH="100%">
+<TR VALIGN="middle"><TD bgcolor="#C08060" COLSPAN="1" HEIGHT="35"><FONT  SIZE="+2"><B>&nbsp;Fetch Sequence</B></font></TD></TR>
+<TR><TD><B>Microinstructions</B></TD></TR>
+<TR><TD>
+PC-&gt;MAR<BR>
+MEM[MAR]-&gt;MDR<BR>
+MDR-&gt;IR<BR>
++2 PC<BR>
+DECODE IR<BR>
+</TD></TR>
+</TABLE><P></P>
+
+<TABLE bgcolor="#FFC0A0" BORDER="1" CELLPADDING="0" CELLSPACING="3" WIDTH="100%">
+<TR VALIGN="middle"><TD bgcolor="#C08060" COLSPAN="7" HEIGHT="35"><FONT  SIZE="+2"><B>&nbsp;Instruction Format Fields</B></font></TD></TR>
+<TR><TD><B>Name</B></TD><TD><B>Type</B></TD><TD><B>Number of Bits</B></TD><TD><B>Relativity</B></TD><TD><B>Signed</B></TD><TD><B>Default Value</B></TD><TD><B>Values</B></TD></TR>
+
+<TR><TD>addr</TD><TD>required</TD><TD>8</TD><TD>absolute</TD><TD>false</TD><TD>0</TD><TD>&lt;any&gt;</TD></TR>
+<TR><TD>unused</TD><TD>ignored</TD><TD>8</TD><TD>absolute</TD><TD>true</TD><TD>0</TD><TD>&lt;any&gt;</TD></TR>
+<TR><TD>op</TD><TD>required</TD><TD>8</TD><TD>absolute</TD><TD>false</TD><TD>0</TD><TD>&lt;any&gt;</TD></TR>
+</TABLE><P></P>
+
+<TABLE bgcolor="#FFC0A0" BORDER="1" CELLPADDING="0" CELLSPACING="3" WIDTH="100%">
+<TR VALIGN="middle"><TD bgcolor="#C08060" COLSPAN="5" HEIGHT="35"><FONT  SIZE="+2"><B>&nbsp;Machine Instructions</B></font></TD></TR>
+<TR><TD><B>Name</B></TD><TD><B>Opcode (hex)</B></TD><TD><B>Instruction Format</B></TD><TD><B>Assembly Format</B></TD><TD><B>Microinstructions</B></TD></TR>
+
+<TR><TD>NOP</TD><TD>00</TD><TD><table width="100%"><tr><td align="center" width="50.0%" bgcolor="#c9c6e4">op</td><td align="center" width="50.0%" bgcolor="#c3d7e6">unused</td></tr></table></TD><TD><table width="100%"><tr><td align="center" width="100.0%" bgcolor="#c9c6e4">op</td></tr></table></TD><TD>End<BR></TD></TR>
+
+<TR><TD>LDA</TD><TD>01</TD><TD><table width="100%"><tr><td align="center" width="50.0%" bgcolor="#c9c6e4">op</td><td align="center" width="50.0%" bgcolor="#f0838c">addr</td></tr></table></TD><TD><table width="100%"><tr><td align="center" width="50.0%" bgcolor="#c9c6e4">op</td><td align="center" width="50.0%" bgcolor="#f0838c">addr</td></tr></table></TD><TD>IR-&gt;MAR<BR>MEM[MAR]-&gt;MDR<BR>MDR-&gt;AC<BR>End<BR></TD></TR>
+
+<TR><TD>STO</TD><TD>02</TD><TD><table width="100%"><tr><td align="center" width="50.0%" bgcolor="#c9c6e4">op</td><td align="center" width="50.0%" bgcolor="#d8afe7">addr</td></tr></table></TD><TD><table width="100%"><tr><td align="center" width="50.0%" bgcolor="#c9c6e4">op</td><td align="center" width="50.0%" bgcolor="#d8afe7">addr</td></tr></table></TD><TD>IR-&gt;MAR<BR>AC-&gt;MDR<BR>MDR-&gt;MEN[MAR]<BR>End<BR></TD></TR>
+
+<TR><TD>LAD</TD><TD>03</TD><TD><table width="100%"><tr><td align="center" width="50.0%" bgcolor="#c9c6e4">op</td><td align="center" width="50.0%" bgcolor="#b3eacd">addr</td></tr></table></TD><TD><table width="100%"><tr><td align="center" width="50.0%" bgcolor="#c9c6e4">op</td><td align="center" width="50.0%" bgcolor="#b3eacd">addr</td></tr></table></TD><TD>IR-&gt;MAR<BR>MEM[MAR]-&gt;MDR<BR>MDR-&gt;AC<BR>+2 MDR<BR>MDR-&gt;MEN[MAR]<BR>AC-&gt;MAR<BR>MEM[MAR]-&gt;MDR<BR>MDR-&gt;AC<BR>End<BR></TD></TR>
+
+<TR><TD>ADD</TD><TD>04</TD><TD><table width="100%"><tr><td align="center" width="50.0%" bgcolor="#c9c6e4">op</td><td align="center" width="50.0%" bgcolor="#e7a9c9">addr</td></tr></table></TD><TD><table width="100%"><tr><td align="center" width="50.0%" bgcolor="#c9c6e4">op</td><td align="center" width="50.0%" bgcolor="#e7a9c9">addr</td></tr></table></TD><TD>IR-&gt;MAR<BR>MEM[MAR]-&gt;MDR<BR>AC(+)MDR-&gt;AC<BR>End<BR></TD></TR>
+
+<TR><TD>SUB</TD><TD>05</TD><TD><table width="100%"><tr><td align="center" width="50.0%" bgcolor="#c9c6e4">op</td><td align="center" width="50.0%" bgcolor="#bfbc90">addr</td></tr></table></TD><TD><table width="100%"><tr><td align="center" width="50.0%" bgcolor="#c9c6e4">op</td><td align="center" width="50.0%" bgcolor="#bfbc90">addr</td></tr></table></TD><TD>IR-&gt;MAR<BR>MEM[MAR]-&gt;MDR<BR>AC(-)MDR-&gt;AC<BR>End<BR></TD></TR>
+
+<TR><TD>XOR</TD><TD>06</TD><TD><table width="100%"><tr><td align="center" width="50.0%" bgcolor="#c9c6e4">op</td><td align="center" width="50.0%" bgcolor="#d5c996">addr</td></tr></table></TD><TD><table width="100%"><tr><td align="center" width="50.0%" bgcolor="#c9c6e4">op</td><td align="center" width="50.0%" bgcolor="#d5c996">addr</td></tr></table></TD><TD>IR-&gt;MAR<BR>MEM[MAR]-&gt;MDR<BR>AC(xor)MDR-&gt;AC<BR>End<BR></TD></TR>
+
+<TR><TD>AND</TD><TD>07</TD><TD><table width="100%"><tr><td align="center" width="50.0%" bgcolor="#c9c6e4">op</td><td align="center" width="50.0%" bgcolor="#e0dff2">addr</td></tr></table></TD><TD><table width="100%"><tr><td align="center" width="50.0%" bgcolor="#c9c6e4">op</td><td align="center" width="50.0%" bgcolor="#e0dff2">addr</td></tr></table></TD><TD>IR-&gt;MAR<BR>MEM[MAR]-&gt;MDR<BR>AC(and)MDR-AC<BR>End<BR></TD></TR>
+
+<TR><TD>IN</TD><TD>08</TD><TD><table width="100%"><tr><td align="center" width="50.0%" bgcolor="#c9c6e4">op</td><td align="center" width="50.0%" bgcolor="#c3d7e6">unused</td></tr></table></TD><TD><table width="100%"><tr><td align="center" width="100.0%" bgcolor="#c9c6e4">op</td></tr></table></TD><TD>IN(int)-&gt;AC<BR>End<BR></TD></TR>
+
+<TR><TD>OUT</TD><TD>09</TD><TD><table width="100%"><tr><td align="center" width="50.0%" bgcolor="#c9c6e4">op</td><td align="center" width="50.0%" bgcolor="#c3d7e6">unused</td></tr></table></TD><TD><table width="100%"><tr><td align="center" width="100.0%" bgcolor="#c9c6e4">op</td></tr></table></TD><TD>AC-&gt;OUT(int)<BR>End<BR></TD></TR>
+
+<TR><TD>SWP</TD><TD>0A</TD><TD><table width="100%"><tr><td align="center" width="50.0%" bgcolor="#c9c6e4">op</td><td align="center" width="50.0%" bgcolor="#89e4d8">addr</td></tr></table></TD><TD><table width="100%"><tr><td align="center" width="50.0%" bgcolor="#c9c6e4">op</td><td align="center" width="50.0%" bgcolor="#89e4d8">addr</td></tr></table></TD><TD>IR-&gt;MAR<BR>MEM[MAR]-&gt;MDR<BR>MDR-&gt;AC<BR>AC-&gt;MAR<BR>-2 MAR<BR>MEM[MAR]-&gt;MDR<BR>MDR-&gt;AC<BR>-2 MAR<BR>MEM[MAR]-&gt;MDR<BR>AC-&gt;MEN[MAR]<BR>+2 MAR<BR>MDR-&gt;MEN[MAR]<BR>MDR-&gt;AC<BR>End<BR></TD></TR>
+
+<TR><TD>NOT</TD><TD>0B</TD><TD><table width="100%"><tr><td align="center" width="50.0%" bgcolor="#c9c6e4">op</td><td align="center" width="50.0%" bgcolor="#82f19f">unused</td></tr></table></TD><TD><table width="100%"><tr><td align="center" width="100.0%" bgcolor="#c9c6e4">op</td></tr></table></TD><TD>AC(not)-&gt;AC<BR>End<BR></TD></TR>
+
+<TR><TD>BRA</TD><TD>0C</TD><TD><table width="100%"><tr><td align="center" width="50.0%" bgcolor="#c9c6e4">op</td><td align="center" width="50.0%" bgcolor="#f4f9f4">addr</td></tr></table></TD><TD><table width="100%"><tr><td align="center" width="50.0%" bgcolor="#c9c6e4">op</td><td align="center" width="50.0%" bgcolor="#f4f9f4">addr</td></tr></table></TD><TD>IR-&gt;PC<BR>End<BR></TD></TR>
+
+<TR><TD>BRZ</TD><TD>0D</TD><TD><table width="100%"><tr><td align="center" width="50.0%" bgcolor="#c9c6e4">op</td><td align="center" width="50.0%" bgcolor="#e59189">addr</td></tr></table></TD><TD><table width="100%"><tr><td align="center" width="50.0%" bgcolor="#c9c6e4">op</td><td align="center" width="50.0%" bgcolor="#e59189">addr</td></tr></table></TD><TD>if(acc!=0)skip-1<BR>IR-&gt;PC<BR>End<BR></TD></TR>
+
+<TR><TD>BRP</TD><TD>0E</TD><TD><table width="100%"><tr><td align="center" width="50.0%" bgcolor="#c9c6e4">op</td><td align="center" width="50.0%" bgcolor="#8692e5">addr</td></tr></table></TD><TD><table width="100%"><tr><td align="center" width="50.0%" bgcolor="#c9c6e4">op</td><td align="center" width="50.0%" bgcolor="#8692e5">addr</td></tr></table></TD><TD>if(acc&lt;=0)skip-1<BR>IR-&gt;PC<BR>End<BR></TD></TR>
+
+<TR><TD>HLT</TD><TD>0F</TD><TD><table width="100%"><tr><td align="center" width="50.0%" bgcolor="#a3e6bc">op</td><td align="center" width="50.0%" bgcolor="#eddcd8">unused</td></tr></table></TD><TD><table width="100%"><tr><td align="center" width="100.0%" bgcolor="#a3e6bc">op</td></tr></table></TD><TD>set-halt-bit<BR>End<BR></TD></TR>
+</TABLE><P></P>
+</BODY></HTML>

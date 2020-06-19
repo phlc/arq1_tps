@@ -1,0 +1,59 @@
+; Arquitetura de Computadores I
+; Projeto
+; Pedro Henrique Lima Carvalho
+; Mat: 651230
+; Questao 4.e) MDC de dois numeros inteiros positivos
+
+Start:	IN
+        STO  a		
+	BRA  Test1 
+in1-ok: IN
+        STO  b
+        BRA  Test2
+in2-ok: SUB  a
+        BRZ  iguais
+        LDA  b
+        SUB  a
+        BRP  BMaior
+newb:   LDA  b
+loopb:  SUB  div
+        BRP  loopb
+        BRZ  newa
+next:   LDA  div
+        ADD  one
+        STO  div
+        SUB  b
+        BRP  Done
+        BRA  newb
+newa:   LDA  a
+loopa:  SUB  div 
+        BRP  loopa
+        BRZ  divOK
+        BRA  next
+divOK:  LDA  div
+        STO  resul
+        BRA  next   
+BMaior: LDA  b ; muda o maior para "a"
+        STO  resul
+        LDA  a
+        STO  b
+        LDA  resul
+        STO  a
+        LDA  one
+        STO  resul
+        BRA  newb
+iguais: LDA  b
+        STO  resul
+        BRA  Done
+Test1:  BRP  in1-ok
+Test2:  BRP  in2-ok
+Done:   LDA  resul
+        OUT
+        HLT  		
+
+a:	.data 2 0 ; operando a
+b:      .data 2 0 ; operando b
+buffer: .data 2 0 ; valor provisorio de b
+div:    .data 2 2 [2]; divisor comeca em 2
+one:    .data 2 2 [1]; um
+resul:  .data 2 2 [1]; resultado comeca em 1

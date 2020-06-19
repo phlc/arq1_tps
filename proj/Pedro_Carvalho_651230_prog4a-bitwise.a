@@ -1,0 +1,23 @@
+; Arquitetura de Computadores I
+; Projeto
+; Pedro Henrique Lima Carvalho
+; Mat: 651230
+; Questao 4.a) Tabela Verdade XNOR
+; XNOR com 2 entradas ate entrada negativa
+
+Start:	IN		
+	BRA  Test  	
+in1-Ok:	STO  op  	
+	IN
+        BRA  Test2	
+in2-Ok: XOR  op	
+        NOT
+        OUT
+        BRA  Start
+Test:   BRP  in1-Ok
+        BRZ  in1-Ok
+Test2:  BRP  in2-Ok
+        BRZ  in2-Ok
+Done:   HLT  		
+
+op:	.data 2 0 ; operando
