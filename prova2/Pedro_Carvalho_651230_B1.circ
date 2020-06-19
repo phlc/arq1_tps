@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="2.16.1.2.jar" version="1.0">
+This file is intended to be loaded by Logisim http://logisim.altervista.org
+<lib desc="#Wiring" name="0"/>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#TTL" name="2"/>
+  <lib desc="#Plexers" name="3">
+    <tool name="Multiplexer">
+      <a name="enable" val="false"/>
+    </tool>
+    <tool name="Demultiplexer">
+      <a name="enable" val="false"/>
+    </tool>
+    <tool name="Decoder">
+      <a name="enable" val="false"/>
+    </tool>
+  </lib>
+  <lib desc="#Arithmetic" name="4"/>
+  <lib desc="#Memory" name="5">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
+  <lib desc="#I/O" name="6"/>
+  <lib desc="#Base" name="7">
+    <tool name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="Dialog plain 12"/>
+      <a name="color" val="#000000"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+  <main name="main"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="7" map="Button2" name="Poke Tool"/>
+    <tool lib="7" map="Button3" name="Menu Tool"/>
+    <tool lib="7" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="7" name="Poke Tool"/>
+    <tool lib="7" name="Edit Tool"/>
+    <sep/>
+    <tool lib="7" name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="Dialog plain 12"/>
+      <a name="color" val="#000000"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="tristate" val="false"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </tool>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+  </toolbar>
+  <circuit name="main">
+    <a name="circuit" val="main"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="Dialog plain 12"/>
+    <a name="clabelcolor" val="#000000"/>
+    <wire from="(60,170)" to="(130,170)"/>
+    <wire from="(130,210)" to="(140,210)"/>
+    <wire from="(130,170)" to="(130,210)"/>
+    <wire from="(520,250)" to="(530,250)"/>
+    <wire from="(460,170)" to="(460,210)"/>
+    <wire from="(550,210)" to="(550,300)"/>
+    <wire from="(520,210)" to="(550,210)"/>
+    <wire from="(530,250)" to="(530,290)"/>
+    <wire from="(430,230)" to="(460,230)"/>
+    <wire from="(430,230)" to="(430,290)"/>
+    <wire from="(430,290)" to="(530,290)"/>
+    <wire from="(290,300)" to="(550,300)"/>
+    <wire from="(290,230)" to="(290,250)"/>
+    <wire from="(290,250)" to="(290,300)"/>
+    <wire from="(290,230)" to="(300,230)"/>
+    <wire from="(290,250)" to="(300,250)"/>
+    <wire from="(290,210)" to="(300,210)"/>
+    <wire from="(290,170)" to="(290,210)"/>
+    <wire from="(130,170)" to="(290,170)"/>
+    <wire from="(290,170)" to="(460,170)"/>
+    <wire from="(90,260)" to="(90,280)"/>
+    <wire from="(90,280)" to="(210,280)"/>
+    <wire from="(90,260)" to="(100,260)"/>
+    <wire from="(360,210)" to="(370,210)"/>
+    <wire from="(370,210)" to="(370,290)"/>
+    <wire from="(80,290)" to="(370,290)"/>
+    <wire from="(80,240)" to="(80,290)"/>
+    <wire from="(80,240)" to="(100,240)"/>
+    <wire from="(130,250)" to="(140,250)"/>
+    <wire from="(200,250)" to="(210,250)"/>
+    <wire from="(210,250)" to="(210,280)"/>
+    <wire from="(490,270)" to="(490,320)"/>
+    <wire from="(330,270)" to="(330,320)"/>
+    <wire from="(330,320)" to="(490,320)"/>
+    <wire from="(170,270)" to="(170,320)"/>
+    <wire from="(170,320)" to="(330,320)"/>
+    <wire from="(70,320)" to="(170,320)"/>
+    <comp lib="5" loc="(360,210)" name="J-K Flip-Flop"/>
+    <comp lib="7" loc="(182,48)" name="Text">
+      <a name="text" val="Pedro Henrique Lima Carvalho"/>
+    </comp>
+    <comp lib="7" loc="(130,86)" name="Text">
+      <a name="text" val="Prova 2 - B1"/>
+    </comp>
+    <comp lib="1" loc="(130,250)" name="AND Gate"/>
+    <comp lib="0" loc="(60,170)" name="Clock"/>
+    <comp lib="5" loc="(200,210)" name="D Flip-Flop"/>
+    <comp lib="0" loc="(460,250)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="5" loc="(520,210)" name="S-R Flip-Flop"/>
+    <comp lib="7" loc="(132,67)" name="Text">
+      <a name="text" val="Mat: 651230"/>
+    </comp>
+    <comp lib="0" loc="(70,320)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+  </circuit>
+</project>

@@ -1,0 +1,274 @@
+Pontifícia Universidade Católica de Minas Gerais
+Instituto de Ciências Exatas e Informática
+Departamento de Ciência da Computação
+
+Disciplina: Arquitetura de Computadores I
+
+Matrícula: 651230
+Nome     : Pedro Henrique Lima Carvalho
+Data     : 12/06/2020
+Email    : pedrocarvalho@outlook.com
+
+A1.
+Projetar uma máquina de Turing para 
+subtrair uma unidade de um valor inteiro.
+
+Programa
+
+estado atual | entrada | saída | movimento | próximo estado
+-------------|---------|-------|-----------|---------------                 
+       q0    |    1    |   1   |    R      |      q0              
+       q0    |    0    |   0   |    R      |      q0           
+       q0    |    #    |   #   |    L      |      q1           
+       q1    |    1    |   0   |    L      |      q2           
+       q1    |    0    |   1   |    L      |      q3           
+       q2    |    0    |   0   |    L      |      q2     
+       q2    |    1    |   1   |    L      |      q2 
+       q2    |    #    |   #   |    S      |      Fim
+       q3    |    0    |   1   |    L      |      q3     
+       q3    |    1    |   0   |    L      |      q2 
+       q3    |    #    |   1   |    L      |      Fim (escreve 4 bit negativo)            
+
+OBS.: Considerar para testes valores em binário 
+      com até 3 bits e, se necessário, 
+      um bit adicional para sinal negativo.
+      
+      Usar, por definição, '#' como delimitador e
+      (R=para direita, L=para esquerda, S=parar).
+      A entrega do arquivo com o diagrama no JFLAP 
+      será opcional.
+
+B1.
+Projetar um contador circular ímpar (1-3-5-7)
+para o evento x=1, sensível à borda de subida,
+usando os flip-flops na ordem e tipos indicados:
+
+ordem quantidade flip-flop
+  a       01          D
+  b       01         JK
+  c       01         SR
+
+OBS.: Qualquer configuração com valor par deverá
+      levar o contador para o estado inicial igual a 1.
+
+  abc x  a b c
+0 000 0  0 0 0
+1 000 1  0 0 1
+2 001 0  0 0 1
+3 001 1  0 1 1
+4 010 0  0 1 0
+5 010 1  0 0 1
+6 011 0  0 1 1
+7 011 1  1 0 1
+8 100 0  1 0 0
+9 100 1  0 0 1
+A 101 0  1 0 1
+B 101 1  1 1 1
+C 110 0  1 1 0
+D 110 1  0 0 1
+E 111 0  1 1 1
+F 111 1  0 0 1 
+
+Expressões que definem o circuito
+
+Da = SoP  {7, 8, A, B, C, E}
+
+Jb = SoP  {3, 5, 7, B, D, F}  (Quando ocorre toggle dos valores)
+Kb = SoP  {3, 5, 7, B, D, F}
+
+Sc = SoP  {1, 5, 9, D}  (Quando ocorre set - 1, resto e' hold - 0)
+Rc = SoP  {} (Nunca tem Reset -  sempre hold - 0)
+
+OBS.: A entrega do circuito implementado no Logisim
+      será opcional.
+
+
+C1.
+Uma máquina com arquitetura do tipo pilha possui
+as seguintes instruções:
+
+Mnemônico   Algoritmo das microinstruções
+
+PUSH valor  top=top+1;          stack[top]=valor;
+POP  valor  valor = stack[top]; top=top-1;
+ADD         top=top-1;          stack[top] = stack[top]+stack[top+1];
+SUB         top=top-1;          stack[top] = stack[top]-stack[top+1];
+MUL         top=top-1;          stack[top] = stack[top]*stack[top+1];
+DIV         top=top-1;          stack[top] = stack[top]/stack[top+1];
+
+Descrever em linguagem mnemônica como calcular
+
+(a+b)-(c*(d/e))
+
+de modo a otimizar o uso da pilha.
+
+PUSH a
+PUSH b
+ADD
+PUSH c
+PUSH d
+PUSH e
+DIV
+MUL
+SUB
+
+OBS.: Considerar que qualquer operação que exceder
+      os limites da extensão da pilha imediatamente
+      levarão para um estado de erro que parará a
+      máquina.
+
+
+D1.
+Descrever um gerador de clock que, 
+sincronizado com a borda de subida 
+do descrito abaixo, possa três vezes 
+mais rápido do que esse.
+
+// ---------------------------
+// -- test clock generator 
+// ---------------------------
+module clock ( output clk );
+ reg clk;
+ initial
+ begin
+  clk = 1'b0;
+ end
+ always
+ begin
+  #12 clk = ~clk;
+ end
+endmodule
+
+
+// ---------------------------
+// -- test clock generator 3x clock
+// ---------------------------
+module clock3x ( output clk );
+ reg clk;
+ initial
+ begin
+  clk = 1'b0;
+ end
+ always
+ begin
+  #4 clk = ~clk;
+ end
+endmodule
+
+OBS.: A entrega dos arquivos com a implementação 
+      em Verilog (.v) e o respectivo (.vcd)
+      serão opcionais.
+
+
+E1.
+Um microcontrolador de 14 bits pode endereçar
+até 04 bancos de memória de 12 bits de endereço.
+Quais os tamanhos, em kBytes, mínimo e máximo 
+de posições de memória endereçáveis?
+
+Com 14 bits, sendo 4 bancos de 12 bits, os endereços variam de:
+
+Banco    Endereço
+00       000000000000
+11       111111111111  
+
+Total 2ˆ14 bits de enderecos -> 64 bytes - 0,064 Kbytes enderecaveis.
+Valor Max: 0,064kbytes-1bit
+Valor Min: 0
+__________________________________________________________
+
+Extras (opcionais):
+
+01.) Operar os valores abaixo em binário com sinal,
+     usando complemento de 2 em um byte:
+
+     a.) 0 100101 - 1 1011
+
+0 0100101         0 0100101
+1 1111011 Cpl2 -> 0 0000101 Soma-> 0 0101010
+
+     b.) 1 00011  - 0 1100
+
+1 1100011         1 1100011     
+0 0001100 Cpl2->  1 1110100 Soma-> 1 1010111
+
+02.) Fornecer em Verilog a descrição correspondente
+
+     a.) por portas a SoP (3,5,7,8,13)
+
+module a (output s, input x, y, w, z);
+wire a, b, c, d, e;
+and ANDa (a, ~x, ~y,  w,  z);
+and ANDb (b, ~x,  y, ~w,  z);
+and ANDc (c, ~x,  y,  w,  z);
+and ANDd (d,  x, ~y, ~w, ~z);
+and ANDe (e,  x,  y, ~w,  z);
+or OR1 (s, a, b, c, d, e); 
+endmodule
+
+     b.) por expressão a PoS (1,2,3,6,7,10)
+
+module b (output s, input x, y, w, z);
+assign s = (x|y|w|~z)&(x|y|~w|z)&(x|y|~w|~z)&(x|~y|~w|z)&(~x|y|~w|z);
+endmodule
+
+03.) Simplificar pela lógica as expressões abaixo
+
+     a.) a'b c + a' b c' + a b c' + a b' c + a b c
+
+a'b(c+c') + ab'c + ab(c'+c)
+a'b + ab'c + ab
+
+a'b + ab + ab'c + abc(repete termo)
+a'b + ab + ac(b' + b)
+a'b + ab + ac
+b(a'+a) + ac
+b+ac
+
+     b.) ( (a'+b)' + c + (a b +d')' )'
+ (a'+b) . (c+(ab+d')')' 
+ (a'+b) . c'.(ab+d')
+ (a'+b) . (c'ab+d'c')
+ a'd'c' + c'ab + bd'c'
+
+04.) Determinar os estados e as saídas para as máquinas
+
+     a.) Mealy (sem interseção) para identificar 0111
+
+         estado  | 0   saída  | 1   saída
+         000     | 001   0    | 000   0
+         001     | 001   0    | 010   0
+         010     | 001   0    | 011   0    
+         011     | 001   0    | 000   1
+         100
+
+     b.) Moore (com interseção) para identificar 0111
+
+         estado  | 0   saída  | 1   saída
+         000     | 001   0    | 000   0
+         001     | 001   0    | 010   0
+         010     | 001   0    | 011   0    
+         011     | 001   0    | 100   0
+         100     | 001   1    | 000   1   
+
+05.) Três flip-flops JK, montados em sequência, modo "toggle",
+     com as saídas negativas ligadas às entradas de clock
+     dos seguintes, exceto o primeiro (que estará no clock).
+     Quais as saídas na próxima subida do clock E T(oggle)=1?
+
+     a.) após CLR
+
+         Qa = 1
+ 
+         Qb = 0 
+
+         Qc = 0
+
+     b.) após estarem com valor igual a (abc=011)
+
+         Qa = 1
+
+         Qb = 1
+
+         Qc = 1
+
